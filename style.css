@@ -1,0 +1,132 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,700;1,400;1,800&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+/* Hide the number input spinners */
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button,
+input[type="number"] {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  height: 100vh;
+  background-color: hsl(0, 0%, 94%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.container {
+  background-color: hsl(0, 0%, 100%);
+  margin: 0px 20px;
+  padding: 2rem;
+
+  min-width: 90%;
+  min-height: 70%;
+  border-radius: 1rem 1rem 9rem 1rem;
+}
+.dateInput {
+  display: flex;
+  flex-direction: row;
+  gap: 1rem;
+  border-bottom: 2px solid hsl(0, 0%, 86%);
+  padding-bottom: 5rem;
+}
+.inputBox {
+  display: flex;
+  flex-direction: column;
+}
+label {
+  color: hsl(0, 1%, 44%);
+}
+input {
+  width: 90px;
+  padding: 20px;
+  border: 1px solid hsl(0, 0%, 86%);
+  border-radius: 5px;
+  outline: none;
+  font-family: "Poppins", sans-serif;
+  font-weight: 800;
+  font-size: 1.5rem;
+}
+#year {
+  width: 130px;
+}
+input:focus {
+  border-color: hsl(259, 100%, 65%);
+}
+input::placeholder {
+  font-family: "Poppins", sans-serif;
+  font-weight: 800;
+  font-size: 1.5rem;
+}
+input::-ms-value {
+  font-family: "Poppins", sans-serif;
+  font-weight: 800;
+  font-size: 2rem;
+}
+/* input::-ms-value {
+  font-family: "Poppins", sans-serif;
+  font-weight: 800;
+  font-size: 1.5rem;
+} */
+.middle {
+  position: relative;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+button {
+  background-color: hsl(259, 100%, 65%);
+  outline: none;
+  border: none;
+  padding: 0.5rem;
+  border-radius: 50%;
+  position: absolute;
+  transform: translateY(-50%);
+}
+button:hover {
+  background-color: hsl(0, 0%, 8%);
+  cursor: pointer;
+}
+
+.bottom {
+  margin-left: 2rem;
+  padding-top: 5rem;
+  font-size: 3rem;
+  font-weight: 800;
+  font-style: italic;
+  text-transform: lowercase;
+}
+.dash {
+  color: hsl(259, 100%, 65%);
+}
+.error {
+  color: hsl(0, 100%, 67%);
+  font-weight: 400;
+  font-style: italic;
+}
+@media only screen and (min-width: 768px) {
+  .container {
+    min-width: 50%;
+    min-height: 50%;
+  }
+  input {
+    width: 130px;
+  }
+  .middle {
+    justify-content: end;
+  }
+  .dateInput {
+    padding-bottom: 3rem;
+  }
+  .bottom {
+    font-size: 4rem;
+  }
+}

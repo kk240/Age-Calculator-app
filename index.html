@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
+
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./assets/images/favicon-32x32.png"
+    />
+
+    <title>Frontend Mentor | Age calculator app</title>
+
+    <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+    <style>
+      .attribution {
+        font-size: 11px;
+        text-align: center;
+      }
+      .attribution a {
+        color: hsl(228, 45%, 44%);
+      }
+    </style>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.1/moment.min.js"></script>
+
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="container">
+      <div class="dateInput">
+        <div class="day inputBox">
+          <label id="daylabel" for="day">DAY</label>
+          <input
+            name="day"
+            type="number"
+            placeholder="DD"
+            autocomplete="off"
+            min="1"
+            max="31"
+            maxlength="2"
+            required
+            id="day"
+          />
+          <span id="dayError" class="error"></span>
+        </div>
+        <div class="Month inputBox">
+          <label id="monthLabel" for="Month">MONTH</label>
+          <input id="month" type="number" placeholder="MM" autocomplete="off" />
+          <span id="monthError" class="error"></span>
+        </div>
+        <div class="Year inputBox">
+          <label id="yearLabel" for="Year">Year</label>
+          <input
+            id="year"
+            type="number"
+            placeholder="YYYY"
+            autocomplete="off"
+          />
+
+          <span id="yearError" class="error"></span>
+        </div>
+      </div>
+      <div class="middle">
+        <span class="underline"></span>
+        <button id="ageCalculate">
+          <img src="./assets/images/icon-arrow.svg" alt="" />
+        </button>
+      </div>
+      <div class="bottom">
+        <div><span id="yearsSpan" class="dash">--</span> Years</div>
+        <div><span id="monthsSpan" class="dash">--</span> Months</div>
+        <div><span id="daysSpan" class="dash">--</span> Days</div>
+      </div>
+    </div>
+
+    <!-- <div class="attribution">
+      Challenge by
+      <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
+        >Frontend Mentor</a
+      >. Coded by <a href="#">Your Name Here</a>.
+    </div> -->
+    <script src="test.js"></script>
+  </body>
+</html>
